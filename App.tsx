@@ -23,8 +23,7 @@ export default class App extends Component<Props, AppState> {
     super(props);
 
     this.state = {
-
-    }
+    };
   }
 
   render() {

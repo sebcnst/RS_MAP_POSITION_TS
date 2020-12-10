@@ -3,7 +3,7 @@ import {
     PermissionsAndroid
   } from 'react-native';
   
-  import { EventEmitter2 } from "eventemitter2";
+  import { EventEmitter2 } from 'eventemitter2';
   import isEqual from 'lodash/isEqual';
   import GPSState from 'react-native-gps-state';
   import Geolocation from '@react-native-community/geolocation';

@@ -2,53 +2,14 @@ import React, {Component} from 'react';
 import {
     StyleSheet,
     View,
-    Text,
-    TouchableOpacity
 } from 'react-native';
-
-import MapView, { Camera, Marker, PROVIDER_GOOGLE } from 'react-native-maps';
+import MapView, { Camera } from 'react-native-maps';
 import MyLocationMapMarker, { Position } from './position/MyLocation';
 
-
-const obj = [
-    {
-        id: 1,
-        latlng: {
-            latitude: 44.837817,
-            longitude: -0.567724
-        }
-    },
-    {
-        id: 2,
-        latlng: {
-            latitude: 44.037817,
-            longitude: -0.367724
-        }
-    },
-    {
-        id: 3,
-        latlng: {
-            latitude: 44.637817,
-            longitude: -0.567724
-        }
-    },
-    {
-        id: 4,
-        latlng: {
-            latitude: 43.837817,
-            longitude: -0.567724
-        }
-    }  
-];
-
-const edgePadding = {top: 140, right: 80, bottom: 140, left: 80};
 
 
 type MapHomeState = {
     initialRegion: any|undefined;
-    positionLoad: boolean;
-    show_add_form: boolean;
-    markers: any|undefined;
 }
 type Props = {
 }
@@ -61,11 +22,6 @@ export default class MapHome extends Component<Props, MapHomeState> {
         this.state = {
             initialRegion: undefined,
         };
-    }
-
-
-    componentDidMount() {
-        this.setState({markers: obj})
     }
 
     _onMap(map:any){
@@ -105,12 +61,11 @@ export default class MapHome extends Component<Props, MapHomeState> {
 
     render() {
 
-        const { initialRegion, positionLoad, show_add_form, markers } = this.state;
+        const { } = this.state;
 
         return (
             <View style={styles.container}>
                 <MapView
-                    provider={ PROVIDER_GOOGLE }
                     ref={map => this._onMap(map)}
                     style={styles.map}
                     showsUserLocation={false}

@@ -4,12 +4,11 @@ import {
   Text,
   View
 } from 'react-native';
-import { Circle, Marker } from 'react-native-maps';
+import { Marker } from 'react-native-maps';
 import LocationManager from './LocationManager';
 
 const ANCHOR = { x: 0.5, y: 0.5 };
 
-const colorOfmyLocationMapMarker = "red";
 
 export class Position {
   animatedRegion?: any
